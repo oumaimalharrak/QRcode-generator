@@ -1,0 +1,57 @@
+.form{
+    font-family: Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    background: #ebebeb;
+}
+.form h1{
+    background: #b4604b;
+    padding: 20px 0;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+    font-size: 25px;
+}
+
+.form input[type="text"],
+.form input[type="url"]{
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+}
+
+.form button {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 150px;
+    margin: 0 auto;
+    padding: 3%;
+    background: #b4604b;
+    border-bottom: 1px solid #b4604b;
+    /* border-top-style: none;
+    border-right-style:none;
+    border-left-style: none; */
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+}
+.form button:hover{
+    background: rgba(111, 104, 108, 0.15);
+    color: #555;
+}
+#qrcode-container{
+    display: none;
+}
+.qrcode{
+    padding: 16px;
+}
+.qrcode img{
+    margin: 0 auto;
+}

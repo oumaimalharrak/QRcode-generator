@@ -15,20 +15,23 @@
             <input type="url" name="website" id="website" placeholder="https://www.turing.com" required />
             <button type="button" onclick="generateQrCode()">Generate QR code</button>
         </form>
-    </div>
+    
     <div id="qrcode-container">
         <div id="qrcode" class="qrcode"></div>
-        <h4>With some style</h4>
+        <!-- <h4>With some style</h4> -->
         <div id="qrcode-2" class="qrcode"></div>
     </div>
+</div>
     <script type="text/javascript">
         const generateQrCode =()=>{
             let website = document.getElementById('website').value;
             if(website){
                 let qrcodecontainer= document.getElementById('qrcode');
                 qrcodecontainer.innerHTML="";
-                new QRcode(qrcodecontainer, website)
+                new QRCode(qrcodecontainer, website)
                 document.getElementById('qrcode-container').style.display ='block'
+            }else{
+                alert("enter a valid URL")
             }
         }
     </script>
