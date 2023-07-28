@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <!-- load qrcoejs library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <title>QRcode-generator</title>
+</head>
+<body>
+    <div class="form">
+        <h1>QR code  using qrcodejs</h1>
+        <form action="">
+            <input type="url" name="website" id="website" placeholder="https://www.turing.com" required />
+            <button type="button" onclick="generateQrCode()">Generate QR code</button>
+        </form>
+    </div>
+    <div id="qrcode-container">
+        <div id="qrcode" class="qrcode"></div>
+        <h4>With some style</h4>
+        <div id="qrcode-2" class="qrcode"></div>
+    </div>
+    <script type="text/javascript">
+        const generateQrCode =()=>{
+            let website = document.getElementById('website').value;
+            if(website){
+                let qrcodecontainer= document.getElementById('qrcode');
+                qrcodecontainer.innerHTML="";
+                new QRcode(qrcodecontainer, website)
+                document.getElementById('qrcode-container').style.display ='block'
+            }
+        }
+    </script>
+</body>
+</html>
